@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MVCAssignment.Models.ProjectEmployeeMapping>
+
+@{
+    ViewBag.Title = "Index";
+}
+<center>
+    <h2>Project_Employee_Mapping</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProId)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmpId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProId)
+                </td>
+            </tr>
+        }
+    </table>
+</center>
